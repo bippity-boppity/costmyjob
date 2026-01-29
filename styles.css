@@ -1,0 +1,104 @@
+/* ==========================
+   General Body & Container
+========================== */
+body {
+    background-color: #f8f9fa; /* light gray background */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-bottom: 40px; /* bottom spacing for mobile */
+}
+
+.container {
+    max-width: 700px; /* consistent width across calculators */
+}
+
+/* ==========================
+   Headers
+========================== */
+header h1, header h2 {
+    font-weight: 700;
+}
+
+/* ==========================
+   Cards
+========================== */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Homepage cards */
+.card-home .card-body {
+    padding: 1rem 0.5rem;
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================
+   Form Elements
+========================== */
+form label {
+    font-weight: 500;
+}
+
+form .form-check-label {
+    display: flex;
+    align-items: center;
+}
+
+form .form-check-label i {
+    margin-right: 6px;
+}
+
+form button {
+    font-size: 1rem;
+}
+
+/* ==========================
+   Calculator Result
+========================== */
+#result {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* ==========================
+   Disclaimer / Footer text
+========================== */
+p.text-muted {
+    font-size: 0.85rem;
+}
+
+/* ==========================
+   Back Button in Header
+========================== */
+header a.btn {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.6rem;
+}
+
+/* ==========================
+   Responsive tweaks
+========================== */
+@media (max-width: 576px) {
+    .card-home .card-body {
+        padding: 1rem;
+    }
+    .card-icon {
+        font-size: 2rem;
+    }
+}

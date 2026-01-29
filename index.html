@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cost My Job - Home</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost My Job</title>
+<meta name="description" content="Estimate the cost of your bathroom, kitchen, or home extension in the UK using Cost My Job calculators. Free and easy to use!">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-light">
 
-  <!-- Header -->
-  <header class="bg-primary text-white py-5 mb-5">
+<header class="bg-primary text-white py-5 mb-5">
     <div class="container text-center">
       <h1 class="display-4 fw-bold"><i class="fa-solid fa-calculator me-2"></i>Cost My Job</h1>
       <p class="lead">Quick, easy cost estimators for your home improvement projects</p>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container my-5" style="max-width: 900px;">
+<main class="container my-5" style="max-width: 900px;">
     <div class="row text-center g-4">
       <!-- Bathroom -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm card-home">
           <div class="card-body">
             <i class="fa-solid fa-shower fa-3x mb-3 text-primary"></i>
             <h5 class="card-title">Bathroom Renovation</h5>
             <p class="card-text">Estimate the cost of your bathroom renovation.</p>
-            <a href="bathroom/index.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right me-1"></i>Try it</a>
+            <a href="bathroom/index.html" class="btn btn-primary stretched-link"><i class="fa-solid fa-arrow-right me-1"></i>Try it</a>
           </div>
         </div>
       </div>
       <!-- Kitchen -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm card-home">
           <div class="card-body">
             <i class="fa-solid fa-kitchen-set fa-3x mb-3 text-success"></i>
             <h5 class="card-title">Kitchen Renovation</h5>
             <p class="card-text">Estimate your kitchen renovation costs easily.</p>
-            <a href="kitchen/index.html" class="btn btn-success"><i class="fa-solid fa-arrow-right me-1"></i>Try it</a>
+            <a href="kitchen/index.html" class="btn btn-success stretched-link"><i class="fa-solid fa-arrow-right me-1"></i>Try it</a>
           </div>
         </div>
       </div>
       <!-- Extension -->
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm card-home">
           <div class="card-body">
-            <i class="fa-solid fa-house fa-3x mb-3 text-warning"></i>
+            <i class="fa-solid fa-house fa-3x mb-3 text-info"></i>
             <h5 class="card-title">Home Extension</h5>
             <p class="card-text">Estimate costs for a home extension project.</p>
-            <a href="extension/index.html" class="btn btn-warning"><i class="fa-solid fa-arrow-right me-1"></i>Try it</a>
+            <a href="extension/index.html" class="btn btn-info stretched-link"><i class="fa-solid fa-arrow-right me-1"></i>Try it</a>
           </div>
         </div>
       </div>
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p class="mb-0">&copy; 2026 Cost My Job</p>
-      <p class="mb-0">Made with <i class="fa-solid fa-heart text-danger"></i> by Adam Hails</p>
+    <div class="alert alert-info mt-4 text-center">
+      <i class="fa-solid fa-circle-plus"></i>
+      More calculators coming soon
     </div>
-  </footer>
 
+    <div class="text-center">
+      <a href="about.html" class="btn btn-outline-secondary mt-4"><i class="fa-solid fa-info-circle me-1"></i> About / Disclaimer</a>
+    </div>
+
+  </main>
 </body>
 </html>
