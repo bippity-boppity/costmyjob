@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cost My Job - Kitchen</title>
 <meta name="description" content="Estimate the cost of your kitchen renovation in the UK using Cost My Job calculators. Free and easy to use!">
+<meta name="robots" content="index, follow">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
 <!-- Bootstrap -->
@@ -16,12 +17,19 @@
 
 <body class="bg-light">
 
-<header class="bg-success text-white py-4 mb-4 position-relative">
-  <div class="container text-center" style="max-width:700px;">
-    <a href="../index.html" class="btn btn-outline-light position-absolute start-0 top-50 translate-middle-y ms-3">
-      <i class="fa-solid fa-chevron-left me-1"></i> Home
-    </a>
-    <h1 class="h3 fw-bold"><i class="fa-solid fa-kitchen-set me-2"></i>Cost My Job - Kitchen</h1>
+<header class="bg-success text-white py-4 mb-4">
+  <div class="container" style="max-width:700px;">
+    <div class="row">
+        <div class="col-lg-2 mb-lg-0 mb-3">
+            <a href="../index.html" class="btn btn-outline-light">
+              <i class="fa-solid fa-chevron-left me-1"></i> Home
+            </a>
+        </div>
+
+        <div class="col-lg-8 text-center">
+            <h1 class="h3 fw-bold"><i class="fa-solid fa-kitchen-set me-2"></i>Cost My Job - Kitchen</h1>
+        </div>
+    </div>
   </div>
 </header>
 
@@ -41,6 +49,18 @@
         <option value="budget">Budget</option>
         <option value="mid" selected>Mid-range</option>
         <option value="luxury">Luxury</option>
+      </select>
+
+      <label class="form-label"><i class="fa-solid fa-map-location-dot me-1"></i> Location</label>
+      <select id="location" class="form-select mb-3">
+        <option value="north">North of England</option>
+        <option value="midlands">Midlands</option>
+        <option value="southwest">South West</option>
+        <option value="wales">Wales</option>
+        <option value="scotland">Scotland</option>
+        <option value="northernireland">Northern Ireland</option>
+        <option value="southeast">South East (excluding London)</option>
+        <option value="london">London</option>
       </select>
 
       <div class="form-check">
@@ -79,6 +99,7 @@ document.getElementById("calcForm").addEventListener("submit", function(e){
 
   const size = document.getElementById("size").value;
   const quality = document.getElementById("quality").value;
+  const location = document.getElementById("location").value;
   const appliances = document.getElementById("appliances").checked;
   const cabinets = document.getElementById("cabinets").checked;
   const flooring = document.getElementById("flooring").checked;
@@ -86,12 +107,29 @@ document.getElementById("calcForm").addEventListener("submit", function(e){
 
   let base = 6000;
 
+  // Size
   if(size==="small") base*=0.8;
   if(size==="large") base*=1.6;
 
+  // Quality
   if(quality==="budget") base*=0.85;
   if(quality==="luxury") base*=1.6;
 
+  // Region multipliers
+  const regionMultipliers = {
+    north: 0.95,
+    midlands: 1.0,
+    southwest: 1.05,
+    wales: 0.95,
+    scotland: 1.0,
+    northernireland: 0.9,
+    southeast: 1.15,
+    london: 1.3
+  };
+
+  base *= regionMultipliers[location];
+
+  // Extras
   if(appliances) base+=1200;
   if(cabinets) base+=1500;
   if(flooring) base+=700;
@@ -104,5 +142,35 @@ document.getElementById("calcForm").addEventListener("submit", function(e){
     `Estimated cost: £${min.toLocaleString()} – £${max.toLocaleString()}`;
 });
 </script>
+
+<div id="cookieBanner" class="cookie-banner d-none">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <span>
+      <i class="fa-solid fa-cookie-bite me-1"></i>
+      We use cookies for analytics and advertising. 
+      <a href="cookies.html" class="text-white text-decoration-underline">Learn more</a>.
+    </span>
+    <button class="btn btn-light btn-sm mt-2 mt-md-0" id="acceptCookies">
+      Accept
+    </button>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookieBanner");
+  const button = document.getElementById("acceptCookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.classList.remove("d-none");
+  }
+
+  button.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+});
+</script>
+
 </body>
 </html>

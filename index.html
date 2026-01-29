@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cost My Job</title>
 <meta name="description" content="Estimate the cost of your bathroom, kitchen, or home extension in the UK using Cost My Job calculators. Free and easy to use!">
+<meta name="robots" content="index, follow">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 <!-- Bootstrap -->
@@ -67,9 +68,38 @@
     </div>
 
     <div class="text-center">
-      <a href="about.html" class="btn btn-outline-secondary mt-4"><i class="fa-solid fa-info-circle me-1"></i> About / Disclaimer</a>
+      <a href="about.html" class="btn btn-sm btn-outline-secondary mt-4 mx-1">About / Disclaimer</a>
+      <a href="privacy.html" class="btn btn-sm btn-outline-secondary mt-4 mx-1">Privacy / Cookies</a>
     </div>
-
   </main>
+
+  <div id="cookieBanner" class="cookie-banner d-none">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <span>
+      <i class="fa-solid fa-cookie-bite me-1"></i>
+      We use cookies for analytics and advertising. 
+      <a href="cookies.html" class="text-white text-decoration-underline">Learn more</a>.
+    </span>
+    <button class="btn btn-light btn-sm mt-2 mt-md-0" id="acceptCookies">
+      Accept
+    </button>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookieBanner");
+  const button = document.getElementById("acceptCookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.classList.remove("d-none");
+  }
+
+  button.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+});
+</script>
+
 </body>
 </html>
