@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bathroom Renovation Calculator | Cost My Job</title>
+  <title>Kitchen Renovation Calculator | Cost My Job</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="bg-light">
 
-  <!-- Header -->
   <header class="bg-primary text-white py-4 mb-4">
     <div class="container text-center" style="max-width:700px;">
-      <h1 class="h3 fw-bold"><i class="fa-solid fa-calculator me-2"></i>Cost My Job - Bathroom</h1>
+      <h1 class="h3 fw-bold"><i class="fa-solid fa-calculator me-2"></i>Cost My Job - Kitchen</h1>
     </div>
   </header>
 
   <main class="container mb-5" style="max-width:700px;">
     <div class="card shadow-sm p-4 bg-white">
-      <h2 class="h5 mb-4"><i class="fa-solid fa-shower me-2"></i>Enter Your Details</h2>
+      <h2 class="h5 mb-4"><i class="fa-solid fa-kitchen-set me-2"></i>Enter Your Details</h2>
       <form id="calcForm">
-
-        <!-- Bathroom Size -->
         <div class="mb-3">
-          <label class="form-label"><i class="fa-solid fa-ruler-combined me-1"></i>Bathroom Size</label>
+          <label class="form-label"><i class="fa-solid fa-ruler-combined me-1"></i>Kitchen Size</label>
           <select id="size" class="form-select">
             <option value="small">Small</option>
             <option value="standard">Standard</option>
@@ -32,7 +29,6 @@
           </select>
         </div>
 
-        <!-- Quality Level -->
         <div class="mb-3">
           <label class="form-label"><i class="fa-solid fa-gem me-1"></i>Quality Level</label>
           <select id="quality" class="form-select">
@@ -42,44 +38,26 @@
           </select>
         </div>
 
-        <!-- Location -->
-        <div class="mb-3">
-          <label class="form-label"><i class="fa-solid fa-map-location-dot me-1"></i>Location</label>
-          <select id="location" class="form-select">
-            <option value="north">North</option>
-            <option value="midlands">Midlands</option>
-            <option value="london">London / South East</option>
-          </select>
-        </div>
-
-        <!-- Extras -->
         <div class="form-check mb-2">
-          <input type="checkbox" id="ufh" class="form-check-input">
-          <label class="form-check-label"><i class="fa-solid fa-fire me-1"></i>Underfloor Heating</label>
+          <input type="checkbox" id="appliances" class="form-check-input">
+          <label class="form-check-label"><i class="fa-solid fa-microchip me-1"></i>High-end Appliances</label>
         </div>
         <div class="form-check mb-2">
-          <input type="checkbox" id="walkin" class="form-check-input">
-          <label class="form-check-label"><i class="fa-solid fa-person-bathing me-1"></i>Walk-in Shower</label>
-        </div>
-        <div class="form-check mb-2">
-          <input type="checkbox" id="tiling" class="form-check-input">
-          <label class="form-check-label"><i class="fa-solid fa-border-all me-1"></i>Tile Quality Upgrade</label>
+          <input type="checkbox" id="cabinets" class="form-check-input">
+          <label class="form-check-label"><i class="fa-solid fa-boxes-stacked me-1"></i>Premium Cabinetry</label>
         </div>
         <div class="form-check mb-3">
           <input type="checkbox" id="plumbing" class="form-check-input">
           <label class="form-check-label"><i class="fa-solid fa-wrench me-1"></i>Plumbing Relocation</label>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100 mb-3">
+        <button type="submit" class="btn btn-success w-100 mb-3">
           <i class="fa-solid fa-calculator me-1"></i>Calculate
         </button>
-
         <a href="../index.html" class="btn btn-secondary w-100">
           <i class="fa-solid fa-arrow-left me-1"></i>Back to Home
         </a>
       </form>
-
-      <!-- Result -->
       <div id="result" class="mt-4 p-3 bg-light border rounded fw-bold text-center"></div>
     </div>
   </main>

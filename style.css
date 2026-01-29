@@ -1,0 +1,66 @@
+/* ==========================
+   Body & Typography
+=========================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* ==========================
+   Containers / Cards
+=========================== */
+.container {
+  max-width: 700px;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   Headers
+=========================== */
+header h1, header h2, h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* ==========================
+   Buttons
+=========================== */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}
+
+/* ==========================
+   Form Elements
+=========================== */
+.form-check-label i, .form-label i {
+  color: #007bff;
+}
+
+#result {
+  font-size: 1.2rem;
+}
+
+/* ==========================
+   Footer
+=========================== */
+footer {
+  font-size: 0.9rem;
+}
+
+footer i.fa-heart {
+  color: #e63946;
+}
